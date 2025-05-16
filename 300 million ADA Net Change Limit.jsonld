@@ -1,0 +1,56 @@
+{
+  "@context": {
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP100:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP100:referenceHash",
+              "@context": {
+                "hashDigest": "CIP100:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "comment": "CIP100:comment",
+        "externalUpdates": {
+          "@id": "CIP100:externalUpdates",
+          "@context": {
+            "title": "CIP100:update-title",
+            "uri": "CIP100:uri"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "body": {
+    "comment": "NCLは、支出そのものを制限するためのものというより、先に上限を明確にしてから、提案ごとの判断を行うための基盤だと考えています。実際、今のように複数の予算提案が同時進行している状況では、まずNCLをしっかり定めることが大前提だと感じています。個人的には、NCLは300〜350M ADAの範囲であれば現実的だと思っており、今回の300Mはその中でも比較的慎重な設定と言えます。支出の精査は今後のDRepの責任ですが、その前にルールを整える意味で、今回はYESを選びました。\n\nAt this stage, I think it's important that we set the limit first—before diving too deep into individual funding decisions. There are multiple budget proposals in motion, and without a clear ceiling, it’s hard to manage things responsibly. Personally, I see the 300M–350M ADA range as a realistic zone, and this 300M proposal sits at the more cautious end of that spectrum. It’s not about pushing spending—it’s about having a clear structure to operate within, so DReps can make sound judgments. This feels like a necessary step to keep the overall process on track."
+  },
+  "hashAlgorithm": "blake2b-256"
+}
